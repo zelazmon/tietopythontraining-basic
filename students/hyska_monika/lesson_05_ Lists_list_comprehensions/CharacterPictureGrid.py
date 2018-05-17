@@ -20,19 +20,23 @@ grid2 = [['a', '1', 'c', '.', '.'],
          ['f', '3', 'w', '.', '.']]
 
 
-def change_grid(grid):
-    new_list = [[0] * len(grid) for i in range(len(grid[0]))]
-    for i in range(len(grid[0])):
-        k = len(grid) - 1
-        for j in range(len(grid)):
-            new_list[i][j] = grid[k][i]
+def flipped_coordinates(matrix):
+    new_list = [[0] * len(matrix) for i in range(len(matrix[0]))]
+    for i in range(len(matrix[0])):
+        k = len(matrix) - 1
+        for j in range(len(matrix)):
+            new_list[i][j] = matrix[k][i]
             k -= 1
     # print list
+    """
     for row in new_list:
         print(' '.join([str(elem) for elem in row]))
+    """
+    # better to use
+    print('\n'.join(map(''.join, zip(*matrix))))
     return new_list
 
 
-change_grid(grid1)
+flipped_coordinates(grid1)
 print("")
-change_grid(grid2)
+flipped_coordinates(grid2)

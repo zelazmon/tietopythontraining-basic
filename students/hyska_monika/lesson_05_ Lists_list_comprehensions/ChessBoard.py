@@ -7,9 +7,9 @@ chess_board = [[0] * m for i in range(n)]
 
 for i in range(n):
     for j in range(m):
-        if(i % 2 == 0) & (j % 2 == 0):
+        if(i % 2 == 0) and (j % 2 == 0):
             chess_board[i][j] = "."
-        elif(i % 2 != 0) & (j % 2 != 0):
+        elif(i % 2 != 0) and (j % 2 != 0):
             chess_board[i][j] = "."
         else:
             chess_board[i][j] = "*"

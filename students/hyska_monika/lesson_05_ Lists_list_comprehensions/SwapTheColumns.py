@@ -6,9 +6,12 @@ def swap_columns(mylist):
     i = int((input("First column to swap: ")))
     j = int((input("Second column to swap: ")))
     for elem in range(len(mylist)):
+        mylist[elem][i], mylist[elem][j] = mylist[elem][j], mylist[elem][i]
+        """
         temp = mylist[elem][i]
         mylist[elem][i] = mylist[elem][j]
         mylist[elem][j] = temp
+        """
     for row in mylist:
         print('   '.join([str(elem) for elem in row]))
     return mylist

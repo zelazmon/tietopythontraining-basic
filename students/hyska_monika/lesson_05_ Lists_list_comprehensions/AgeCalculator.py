@@ -13,6 +13,18 @@ def check_age(mylist):
     count_child = len(child_list)
     print("Number of child: ", count_child)
 
+"""
+def age_average(age):
+    adults_list = [mylist[x] for x in range(len(mylist)) if mylist[x] >= 18]
+    if len(adults_list) > 0:
+        adult_avg = sum(adults_list) / len(adults_list)
+    else:
+        adult_avg = "Missing adults."
+    print("Average of adults: ", adult_avg )
+    child_list = [mylist[x] for x in range(len(mylist)) if mylist[x] < 18]
+    count_child = len(child_list)
+    print("Number of child: ", count_child)
+"""
 
 print("Put data for list: number of people, and age for these people.")
 check_age(list_elements())

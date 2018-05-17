@@ -3,14 +3,14 @@ from create_lists import list_elements_str
 
 
 def coma_code(mylist):
-    sent_str = ""
+    sent_str = "'"
     for elem in range(len(mylist)):
-        if elem == 0:
-            sent_str += "\'" + mylist[elem] + ", "
-        elif elem == len(mylist) - 1:
-            sent_str += "and " + mylist[elem] + "\'"
-        else:
-            sent_str += mylist[elem] + ", "
+        if elem != len(mylist) - 1 and elem != 0:
+            sent_str += ", "
+        elif elem == len(mylist) - 1 and elem != 0:
+            sent_str += " and "
+        sent_str += mylist[elem]
+    sent_str += "\'"
     print(sent_str)
 
 
